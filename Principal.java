@@ -1,16 +1,16 @@
 public class Principal {
     public static void main(String[] args) {
-        ContaCorrente cc1 = new ContaCorrente (001,100,500);
+        Funcionario f = new Funcionario("Marcelo", 7500);
+        Gerente g = new Gerente ("Marcos",15000,"Florestal");
 
-        ContaPoupanca cp1 = new ContaPoupanca (002,150);
+        f.aumentarSalario(10);
+        g.aumentarSalario(10);
 
-        cc1.depositar(100);
-        cc1.sacar(50);
-        cc1.imprimir();
+        f.obterNome();
+        f.obterSalario();
+        g.imprimirDados();
 
-        cp1.depositar(50);
-        cp1.sacar(25);
-        cp1.imprimir();
-        System.out.println("Marcelo");
+        Funcionario.obterTotalFuncionario();
+        Funcionario.imprimirTotalFuncionarios();
     }
 }
